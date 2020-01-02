@@ -23,6 +23,9 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
+      DoB: {
+        type: Sequelize.DATE
+      },
       img: {
         type: Sequelize.STRING
       },
