@@ -36,6 +36,7 @@ app.group("/api/v1", router => {
 
   // CRUD for event
   router.get("/events", EventController.index);
+  router.get("/event/date/", EventController.byDate)
   router.get("/event/:id", EventController.show);
   router.post("/event", authenticated, EventController.store);
 

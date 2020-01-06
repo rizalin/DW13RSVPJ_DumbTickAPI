@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const favorites = sequelize.define('favorites', {
     event_id: DataTypes.INTEGER,
-    following_user: DataTypes.INTEGER
+    following_user: DataTypes.INTEGER,
+    status: DataTypes.INTEGER
   }, {});
   favorites.associate = function (models) {
     favorites.belongsTo(models.event, {

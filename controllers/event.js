@@ -2,6 +2,9 @@ const models = require("../models");
 const Event = models.event;
 const Category = models.category;
 const User = models.user;
+const { Op } = require('sequelize')
+const moment = require('moment')
+
 
 exports.show = (req, res) => {
   Event.findOne({
@@ -45,4 +48,22 @@ exports.store = (req, res) => {
       event
     });
   });
+};
+
+exports.byDate = (req, res) => {
+  Event.findAll({
+    where: { startTime: { [Op.gt]: new Date() } },
+    include: [
+      {
+        model: Category,
+        as: "category",
+        attributes: ["id", "name"]
+      },
+      {
+        model: User,
+        as: "createdBy",
+        attributes: ["id", "name"]
+      }
+    ]
+  }).then(event => res.send(event));
 };
