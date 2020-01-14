@@ -26,8 +26,8 @@ module.exports = {
         {
           title: "fhana LIVE in Jakarta",
           category_id: 2,
-          startTime: "2019-12-31 18:00:00",
-          endTime: "2020-01-01 02:00:00",
+          startTime: new Date(),
+          endTime: new Date(),
           price: 250000,
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim lectus at velit tincidunt, non hendrerit tellus tincidunt. Nullam lacinia elit at est malesuada tempus. Vestibulum sit amet fermentum justo, vitae imperdiet massa. Sed in eros ultrices, porta lectus sit amet, lacinia libero. Nulla non turpis volutpat, egestas purus non, sodales velit. Integer vestibulum tincidunt viverra. Vivamus faucibus condimentum justo, vel posuere mi commodo eu. Suspendisse in nisi laoreet, blandit ex id, maximus tellus. Vivamus vestibulum eget ipsum a suscipit. Suspendisse non est tellus. Integer sit amet mi sapien. Aliquam erat volutpat. Phasellus pellentesque tellus ante, vitae vulputate metus scelerisque nec. Fusce sed fringilla ligula, non tempus neque. Aliquam sit amet dapibus ligula.",
